@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.wxdemo</groupId>
+	<artifactId>wxdemo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wxdemo</name>
+	<packaging>jar</packaging>
+	<description>Demo project for Spring Boot</description>
+
+	<!-- 定义Java 编译版本为 1.8  -->
+	<properties>
+		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+	<!-- 核心模块，包括自动配置支持、日志和YAML -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+	<!-- 测试模块，包括JUnit、Hamcrest、Mockito -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 添加支持web模块 -->
+		<!--  @EnableAutoConfiguration会根据类路径中的jar依赖为项目进行
+		自动配置，如：添加了spring-boot-starter-web依赖，
+		会自动添加Tomcat和Spring MVC的依赖，
+		Spring Boot会对Tomcat和Spring MVC进行自动配置。 -->
+		<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-web</artifactId>
+ 		</dependency>
+ 		<!-- 开发环境的热部署 -->
+ 		<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-devtools</artifactId>
+        	<optional>true</optional>
+
+   		</dependency>
+   		<dependency>
+   			<groupId>org.springframework.boot</groupId>
+   			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+	<!-- 整合mybatis所需的jar包 -->	
+	<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+	<dependency>
+	    <groupId>org.mybatis.spring.boot</groupId>
+	    <artifactId>mybatis-spring-boot-starter</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-jdbc</artifactId>
+	    <version>2.2.2.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <scope>runtime</scope>
+	</dependency>
+	
+	<!-- 基于spring4all来配置swagger  失败-->
+	<!-- https://mvnrepository.com/artifact/com.spring4all/swagger-spring-boot-starter -->
+	<dependency>
+	    <groupId>com.spring4all</groupId>
+	    <artifactId>swagger-spring-boot-starter</artifactId>
+	    <version>1.9.0.RELEASE</version>
+	</dependency>
+	
+	<!-- 原生配置swagger -->	
+	<dependency>
+	    <groupId>io.springfox</groupId>
+	    <artifactId>springfox-swagger2</artifactId>
+	  <version>2.9.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>io.springfox</groupId>
+	  <artifactId>springfox-swagger-ui</artifactId>
+	     <version>2.9.2</version>
+	</dependency>
+	
+	
+	<!--配置连接池所需要的jar包druid -->
+	<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>1.1.20</version>
+	</dependency>
+	
+	<!-- 简化pojo(model)里的代码 -->
+	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.12</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- hutool工具包jar -->
+	<dependency>
+	    <groupId>cn.hutool</groupId>
+	    <artifactId>hutool-all</artifactId>
+	    <version>5.4.1</version>
+	</dependency>
+	
+	<!-- 对json进行操作转换的jar包 -->
+	<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+	<dependency>
+	    <groupId>net.sf.json-lib</groupId>
+	    <artifactId>json-lib</artifactId>
+	    <version>2.2.3</version>
+	    <classifier>jdk15</classifier>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.73</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.8.5</version>
+	</dependency>
+	
+	
+
+	
+
+
+	
+	
+   		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                	<fork>true</fork><!-- 如果没有该配置，devtools不会生效 -->
+            	</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
