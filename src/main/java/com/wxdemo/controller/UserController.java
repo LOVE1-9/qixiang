@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,11 +19,14 @@ import com.wxdemo.util.ResultBody;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 //import net.sf.json.JSONObject;
+import io.swagger.annotations.ApiOperation;
 
 
 
-
+@Api(value="/User",description="用户管理",tags="User")
 @RestController
 @RequestMapping("User")
 public class UserController {
@@ -28,7 +34,9 @@ public class UserController {
 	@Autowired
 	UserService  userService;
 	
-	@RequestMapping("insertUser")
+	@ApiOperation(value = "增加用户",notes="根据小程序传来的json字符串来创建user")
+	@ApiImplicitParam(name="user",value="用户")
+	@PostMapping(value="insertUser")
 	public void insertUser(@RequestParam("user") String s) {
 		//一种方法
 //		JSONObject jsonObject = JSONUtil.parseObj(s);
@@ -69,7 +77,7 @@ public class UserController {
 	}
 	
 	
-	@RequestMapping("selectAllUser")
+	@GetMapping(value="selectAllUser")
 	public ResultBody selectAllUser() {
 		Gson gson = new Gson();
 		List list = new ArrayList();

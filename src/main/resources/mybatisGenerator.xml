@@ -33,7 +33,13 @@
 		<sqlMapGenerator targetPackage="com.wxdemo.mapper" targetProject="wxdemo/src/main/java"></sqlMapGenerator>
 		<!-- 生成mapper文件 -->
 		<javaClientGenerator targetPackage="com.wxdemo.mapper" type="XMLMAPPER" targetProject="wxdemo/src/main/java"></javaClientGenerator>
-		<table tableName="user">
+		<table tableName="orders">
+			<generatedKey column="id" sqlStatement="Mysql"/>
+		</table>
+		<table tableName="works">
+			<generatedKey column="id" sqlStatement="Mysql"/>
+		</table>
+		<table tableName="choice">
 			<generatedKey column="id" sqlStatement="Mysql"/>
 		</table>
 	</context>
