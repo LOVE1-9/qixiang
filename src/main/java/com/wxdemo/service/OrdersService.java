@@ -13,4 +13,10 @@ public interface OrdersService {
 	public List<Orders> selectAllByOpenid(String openid);
 	
 	public List<Orders> selectAllDoingOrdersByOpenid(String openid);
+	
+	public List<Orders> selectAllFinishOrdersByOpenid(String openid);
+	
+	public List<Orders> selectAllCnacelOrdersByOpenid(String openid);
+	
+	public List<Orders> selectAllNotPayOrdersByOpenid(String openid);
 }

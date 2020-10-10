@@ -56,17 +56,21 @@ public class UserController {
 		//第三种方法
 		Gson gson = new Gson();
 		User user = gson.fromJson(s,User.class);
-		List list = new ArrayList();
+		List<User> list = new ArrayList();
 		list = userService.selectAll();
 		//来判断数据库里是否有这个用户的信息
 		User u = new User();
 		boolean b = true;
-		for(Object o:list) {
-			 u= (User)o;
-			if(user.getOpenId().equals( u.getOpenId())) {
-				b = false;
+		if(list.size() != 0) {
+			for(Object o:list) {
+				 u= (User)o;
+				if(user.getOpenId().equals( u.getOpenId())) {
+					b = false;
+				}
 			}
+			
 		}
+		
 		if(b) {
 			int result = userService.insert(user);
 		}else {
