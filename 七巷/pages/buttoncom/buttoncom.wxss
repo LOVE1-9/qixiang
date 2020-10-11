@@ -1,0 +1,61 @@
+/* components/buttoncom/buttoncom.wxss */
+@import "../../style/iconfont/comicon/comicon.wxss";
+@import "../../style/iconfont/message/messageicon.wxss";
+.butcom{
+position: fixed;
+height: 105rpx;
+width:105rpx;
+background-color: rgb(132, 218, 218);
+border-radius: 50%;
+position:fixed;
+bottom:250rpx;
+right: 20rpx;
+z-index: 4;
+
+
+}
+.subscribe{
+  font-size: 25rpx;
+  padding-top:25rpx ;
+  color: aliceblue;
+  text-align: center;
+  line-height:100rpx ;
+
+}
+.com1{
+height: 105rpx;
+width:105rpx;
+background-color: black;
+border-radius: 50%;
+position:fixed;
+bottom:360rpx;
+right: 20rpx;
+color: blanchedalmond;
+font-size: 25rpx;
+text-align: center;
+line-height:100rpx ;
+z-index: 4;
+}
+.com2{
+  height: 105rpx;
+width:105rpx;
+background-color: black;
+color: blanchedalmond;
+border-radius: 50%;
+position:fixed;
+bottom:465rpx;
+right: 20rpx;
+font-size: 25rpx;
+text-align: center;
+line-height:100rpx ;
+z-index: 4;
+}
+
+.icon{
+  margin-top: -15rpx;
+}
+.icon1{
+  margin-top:-35rpx;
+}
+
+

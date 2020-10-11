@@ -1,0 +1,151 @@
+
+<view class="page" >
+  <!--通告-->
+  <!--小程序的屏幕宽固定为750rpx（即750个物理像素），在所有设备上都是如此-->
+  <view class="notice" >
+    <view class='pageBox pageTwo'>
+      <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="5000" duration="1000" previous-margin="0rpx" next-margin="0rpx" circular="true" bindchange="bindchange" style='height: {{swiperHeight}}px'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='widthFix'webp="true"></image>
+    </swiper-item>
+  </block>
+ </swiper>
+</view>
+  </view>
+  <!--作品欣赏-->
+  <view class="opus" style="width:100%;padding-top:22px;">
+  <view style="weith:100%;height:15px;background-color:#F0F0F0;"></view>
+    <view class="view_li">
+      <navigator url="../order/order" >
+        <text class="text iconfont icon-zuopinzhuzuo ">作品欣赏</text>
+        <text class="iconfont icon-icon-test"></text>
+      </navigator>
+    </view>
+    <view class="concreteOpus">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (1).webp"webp="true"></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (2).webp"webp="true" ></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+      </view>
+       <view class="flex-wrp" style="flex-direction:row;">
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (1).webp"webp="true"></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (2).webp"webp="true" ></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+      </view>
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (3).webp"webp="true" ></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+        <view>
+        <image catchtap="clickPhoto" lazy-load="true" src="http://120.79.45.185/images/photo1 (4).webp"webp="true" ></image>
+        <text class="ima_text">我是陈智嘉</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="weith:100%;height:15px;background-color:#F0F0F0;"></view>
+  <!--服务套餐-->
+  <view class="setMeal">
+     <view class="view_li">
+      <navigator url="../package/package" >
+        <text class="text iconfont icon-taocan">服务套餐</text>
+        <text class="iconfont icon-icon-test"></text>
+      </navigator>
+    </view>
+    <view class="concreteOpus">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view>
+          <image wx:if="{{allObject.length != 0}}" catchtap="clickChoicPhoto" data-package-Object="{{packageObject1}}" mode='aspectFill' lazy-load="true" src="{{baseUrl}}{{packageObject1.packPhotoName1}}"webp="true"></image>
+          <image wx:else  mode='aspectFill' lazy-load="true" src="../../images/loadingImg.png" webp="true"></image>
+          <text class="ima_text">{{packageObject1.name}}</text>
+          
+          <text class="pay_text"  wx:if="{{allObject.length != 0}}">￥{{packageObject1.price}}.00</text>
+          <text class="pay_text"  wx:else>加载中...</text>
+        
+        </view>
+        <view>
+          <image wx:if="{{allObject.length != 0}}" catchtap="clickChoicPhoto" data-package-Object="{{packageObject2}}" mode='aspectFill' lazy-load="true" src="{{baseUrl}}{{packageObject2.packPhotoName1}}" webp="true"></image>
+          <image wx:else  mode='aspectFill' lazy-load="true" src="../../images/loadingImg.png" webp="true"></image>
+          <text class="ima_text">{{packageObject2.name}}</text>
+          <text class="pay_text" wx:if="{{allObject.length != 0}}">￥{{packageObject2.price}}.00</text>
+          <text class="pay_text"  wx:else>加载中...</text>
+        </view>
+      </view>
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view>
+          <image wx:if="{{allObject.length != 0}}" catchtap="clickChoicPhoto" data-package-Object="{{packageObject3}}" mode='aspectFill' lazy-load="true" src="{{baseUrl}}{{packageObject3.packPhotoName1}}" webp="true"></image>
+          <image wx:else  mode='aspectFill' lazy-load="true" src="../../images/loadingImg.png" webp="true"></image>
+          <text class="ima_text">{{packageObject3.name}}</text>
+          <text class="pay_text" wx:if="{{allObject.length != 0}}">￥{{packageObject3.price}}.00</text>
+          <text class="pay_text"  wx:else>加载中...</text>
+        </view>
+        <view>
+          <image wx:if="{{allObject.length != 0}}" catchtap="clickChoicPhoto" data-package-Object="{{packageObject4}}" mode='aspectFill' lazy-load="true" src="{{baseUrl}}{{packageObject4.packPhotoName1}}" webp="true"></image>
+          <image wx:else  mode='aspectFill' lazy-load="true" src="../../images/loadingImg.png" webp="true"></image>
+          <text class="ima_text">{{packageObject4.name}}</text>
+          <text class="pay_text" wx:if="{{allObject.length != 0}}">￥{{packageObject4.price}}.00</text>
+          <text class="pay_text"  wx:else>加载中...</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="weith:100%;height:15px;background-color:#F0F0F0;"></view> 
+  
+  <view class="view_bottom">
+    <view class="view_bottom_child">
+      <text class="text_bottom">微信：18476203757</text>
+      <button class="copy_button" plain="true" catchtap="copyWxName"> 
+      <text class="text iconfont icon-fuzhi"></text>
+      <text>复制微信号</text>
+      </button>
+    </view>
+    <view>
+      <text class="text_bottom">电话：18476203757</text>
+    </view>
+    <view>
+      <text class="text_bottom">地址：广东省揭阳市普宁市流沙市888号七巷摄影工作室</text>
+    </view>
+    
+    <view class="icon_botton">
+      <button plain="true" catchtap="makePhone">
+        <text class="text iconfont icon-iconfontdianhua1"></text>
+      </button>
+      <button plain="true" catchtap="copyTikTok">
+        <text class="text iconfont icon-douyintexiao"></text>
+      </button>
+      <button plain="true" catchtap="makeWechat">
+        <text class="text iconfont icon-weixin"></text>
+      </button>
+    </view>
+  </view> 
+
+ 
+
+<!--遮罩层   禁止移动：catchtouchmove='false'-->
+  <view class="mask" catchtap="setHidden" hidden="{{judgeHidden}}"> 
+    <view class="wechat_frame" hidden="{{judgeHidden}}">
+    <view style="margin-right:10rpx">
+      <image class="wechatPhoto" src="http://120.79.45.185/images/touxiang.jpg" webp="true"></image>
+      <text style="font-size:28rpx;padding-top:24rpx;display:block;margin-bottom:10rpx">七巷摄影</text>
+      <text style="display:block">更多人的选择，源于我们精湛的技术</text>
+    </view>
+    <view class="borde"></view>
+    <image class="wechatCode" src="http://120.79.45.185/images/wechatCode.png" webp="true"></image>
+    <text style="margin-left: 100rpx">微信：18476203757</text>
+  </view>
+  </view>
+  
+</view>
+<buttoncom></buttoncom>

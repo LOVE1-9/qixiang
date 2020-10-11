@@ -1,0 +1,66 @@
+/* pages/payPage/payPage.wxss */
+
+.head-icon{
+  position: relative;
+  margin-left:10rpx;
+  margin-top:10rpx
+}
+.head-icon-content{
+  display: inline-block ;
+  margin-left: 45rpx;
+  font-size: 30rpx;
+  color: rgb(130, 133, 138);
+}
+.head{
+  margin-left: 85rpx;
+  margin-top: 35rpx;
+}
+
+.head-pic{
+  width:250rpx ;
+  height:200rpx
+}
+
+.head-content{
+  float: left;
+  margin-left: 45rpx;
+  font-size: 28rpx;
+  margin-top: 36rpx;
+}
+.head-mony-price{
+  margin-top: 10rpx;
+}
+.head-mony-deposit{
+  margin-top: 10rpx;
+  color:red;
+  font-size:20rpx ;
+  margin-left: 34rpx;
+}
+
+
+.specific-view{
+  margin-top: 35rpx;
+  position: relative;
+  height:42rpx;
+}
+.specific-message-title{
+  display: inline-block;
+  margin-left: 50rpx;
+ 
+}
+.specific-message-comment{
+  display: inline-block;
+  width: 400rpx;
+  border-bottom: 2rpx solid #A8A8A8;
+  margin-left: 20rpx;
+}
+.specific-text{
+  color:#252525a4;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  height:42rpx;
+}
+
+.description{
+  margin-left:45rpx ;
+}

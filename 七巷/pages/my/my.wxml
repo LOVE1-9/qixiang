@@ -1,0 +1,40 @@
+<view class="page-body">   
+  <view class="user">
+    <image class='background' src="../../images/backgroundofmy.jpg"  mode="aspectFill"></image>
+    <view class="userimg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="username">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view> 
+  <view class="ul">
+    <view class="view_li" style="padding-top:14px">
+      <navigator url="../order/order" >
+        <text class="text iconfont icon-order">我的订单</text>
+        <text class="iconfont icon-icon-test"></text>
+      </navigator>
+    </view>
+    <view class="view_li">
+      <navigator url="../order/order" >
+        <text class=" text iconfont icon-tousu1">我的投诉</text>
+        <text class="iconfont icon-icon-test"></text>
+      </navigator>
+    </view>
+    <view class="view_li">
+      
+      <button class="butt-kefu"open-type="contact" bindcontact="handleContact"> 
+        <text class="text iconfont icon-kefu" style="margin-left:-454rpx">在线客服</text>
+        <text class="iconfont icon-icon-test" > </text>
+        </button>
+       
+    </view>
+    <view class="view_li" style="margin-top:22rpx">
+      <navigator url="../order/order"  >
+        <text class="text iconfont icon-bangzhu">使用帮助</text>
+        <text class="iconfont icon-icon-test"></text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

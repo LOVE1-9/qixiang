@@ -1,0 +1,69 @@
+/* miniprogram/pages/my/my.wxss */
+@import "../../style/iconfont/ordericon/ordericon.wxss";
+@import "../../style/iconfont/threeicon/threeicon.wxss";
+.user{
+    display: flex;  /*弹性布局*/
+    flex-direction:row;
+    align-items: center;
+    /*background-image:url('http://120.79.45.185/images/backgroundofmy.jpg');由于不可使用本地图片,要使用服务器上的或者网络上的，因此不能直接这样*/
+    
+}
+.background {
+  width: 124%;
+  height: 46%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+  }
+.userimg{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 29rpx;
+  margin-left:40rpx;
+}
+.username{
+  margin-left: 20rpx;
+  overflow: hidden;
+  margin-top: 19rpx;
+  color: black;
+}
+.ul{
+  height: 1000rpx;
+  margin-top: 88rpx;
+  margin-left: 50rpx;
+  margin-right: 24rpx;
+  background: white;
+
+}
+
+.text_icon{
+  margin:154rpx;
+}
+
+.text_te{
+  font-family:myFirstFont;
+  
+}
+.view_li{
+  height: 80rpx;
+  width: 676rpx;
+}
+
+.text{
+  font-size: larger;
+  font-weight: 700;
+}
+.butt-kefu{
+  width:100% !important;
+  padding-right:0rpx !important;
+  padding-left:0rpx !important;
+  margin-top:-25rpx;
+  
+  background-color: white;
+}
+.butt-kefu::after{
+  border:0;
+
+}

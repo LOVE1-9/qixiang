@@ -1,0 +1,14 @@
+<!--components/buttoncom/buttoncom.wxml-->
+<view class="butcom">
+<view wx:if="{{sub}}">
+<view class="subscribe" bindtap="tapHandle"><view class=" icon1 iconfont icon-xiaoxi"></view><view style="margin-top:-70rpx">预约</view></view>
+</view>
+<view wx:else> 
+<view class="subscribe" bindtap="tapHandle"><view class=" icon1 iconfont icon-cha"></view><view style="margin-top:-70rpx">取消</view></view>
+</view>
+</view>
+<view class="com" style="display:{{dis}}">
+<button class="com1" open-type="contact"><view class=" icon iconfont icon-zixun1"></view><view style="margin-top:-70rpx" >咨询</view></button>
+<navigator class="com2"><view class=" icon iconfont icon-yudin3"></view><view style="margin-top:-70rpx">预约</view></navigator>
+</view>
+

@@ -1,0 +1,43 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/homePage/homePage",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/reserve/reserve",
+    "pages/package/package",
+    "pages/payPage/payPage",
+    "pages/buttoncom1/buttoncom1"
+  ],
+  "usingComponents": {
+    "buttoncom": "/pages/buttoncom/buttoncom",
+    "buttoncom1": "/pages/buttoncom1/buttoncom1",
+    "van-overlay": "@vant/weapp/overlay/index"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "七巷摄影",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/homePage/homePage",
+        "text": "主页",
+        "iconPath": "images/homePage1.png",
+        "selectedIconPath": "images/homePage1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/myself.png",
+        "selectedIconPath": "images/myself1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

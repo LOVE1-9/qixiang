@@ -1,0 +1,14 @@
+{
+  "name": "qixiang",
+  "version": "0.0.1",
+  "description": "七巷小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.5.0"
+  }
+}

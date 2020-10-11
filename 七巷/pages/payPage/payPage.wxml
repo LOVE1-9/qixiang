@@ -1,0 +1,64 @@
+<view>
+  <view class="head-icon">
+     <van-icon name="label-o" size="40rpx" style="position:absolute"  color=" rgb(130, 133, 138)"/>
+     <view class="head-icon-content">已选套餐</view>
+  </view>
+ 
+  <view class="head">
+    <view style="float:left">
+      <image class="head-pic" src="{{picUrl}}"  webp="true"></image>
+    </view>
+    <view class="head-content">
+      <view class="head-title-choiceName">套餐名称：{{choiceName}}</view> 
+      <view class="head-mony-price">套餐价格：￥{{price}}</view>  
+      <view class="head-mony-deposit">套餐定金：￥{{deposit}}</view>
+    </view>
+  </view>
+
+  <view style="weith:100%;height:5px;background-color:#F0F0F0;margin-top:270rpx;margin-bottom:40rpx"></view> 
+
+  <view class="head-icon">
+    <van-icon name="orders-o" size="40rpx" style="position:absolute" color=" rgb(130, 133, 138)"/>
+     <view class="head-icon-content">预约信息</view>
+  </view>
+  <view class="description">
+      <view class="specific-view">
+        <view style="display:inline-block;position:relative">
+          <van-icon name="contact" size="40rpx" style="position:absolute"/>
+        <view class="specific-message-title">联 系  人 ：</view>
+        </view>
+        <view class="specific-message-comment">
+          <view class="specific-text">{{reserveName}}</view>
+        </view>
+      </view >
+      <view class="specific-view">
+        <view style="display:inline-block;position:relative">
+          <van-icon name="phone-o" size="40rpx" style="position:absolute" />
+          <view class="specific-message-title">联系电话：</view>
+          </view>
+        <view class="specific-message-comment">
+          <view class="specific-text">{{phone}}</view>
+        </view>
+      
+      </view >
+      <view class="specific-view">
+        <view style="display:inline-block;position:relative">
+          <van-icon name="edit" size="40rpx" style="position:absolute"/>
+          <view class="specific-message-title">预约时间：</view>
+        </view>
+        <view class="specific-message-comment">
+          <view class="specific-text" >{{reserveTime}}</view>
+        </view>
+    </view >
+  </view>
+  <van-dialog id="van-dialog" />
+  <van-submit-bar
+  price="{{deposit*100}}"
+  decimal-length="0"
+  label="需付定金："
+  button-text="确认支付"
+  bind:submit="onSubmit"
+  
+/>
+
+</view>

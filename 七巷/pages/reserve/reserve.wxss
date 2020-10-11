@@ -1,0 +1,137 @@
+.view_head{
+  width: 100%;
+  height:270rpx;
+}
+.view_head image{
+  width:270rpx;
+  height:270rpx;
+  margin-left: 235rpx;
+
+}
+
+.reserve-message{
+  position:relative;
+  margin-left: 50rpx;
+}
+
+.reserve-message-title{
+  display: inline-block;
+  margin-left: 50rpx;
+}
+.reserve-message-comment{
+  display: inline-block;
+  width: 400rpx;
+  border-bottom: 2rpx solid #A8A8A8;
+  margin-left: 20rpx;
+}
+.reserve-text{
+  color:#252525a4;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+
+.specific-message{
+  position:relative;
+  margin-left: 50rpx;
+  margin-top: 70rpx;
+}
+.specific-message-topTitle text{
+  color: rgb(67, 214, 133);
+}
+.specific-view{
+  margin-top: 35rpx;
+  position: relative;
+  height:42rpx;
+}
+.specific-message-title{
+  display: inline-block;
+  margin-left: 50rpx;
+ 
+}
+.specific-message-comment{
+  display: inline-block;
+  width: 400rpx;
+  border-bottom: 2rpx solid #A8A8A8;
+  margin-left: 20rpx;
+}
+.specific-text{
+  color:#252525a4;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  height:42rpx;
+}
+
+.view-checkboox{
+  margin-left: 215rpx;
+  margin-top: 90rpx;
+}
+.checkbox{
+  font-size: 25rpx;
+  color: red;
+ 
+}
+
+.submitButton{
+  background-color:rgb(67, 214, 133);
+  width: 360rpx;
+  height: 90rpx;
+  color: white;
+  margin-top: 15rpx;
+
+}
+
+.foot{
+  margin-left: 167rpx;
+  margin-top: 40rpx;
+}
+.foot-icon{
+  display: inline-block;
+  margin-right: 192rpx;
+}
+.foot-icon view{
+  text-align: center;
+  font-size: 25rpx;
+}
+.foot-icon button{
+  border: none;
+  padding:0;
+  font-size: 0;
+  line-height: 0;
+  background-color: white;
+  margin-bottom: 7rpx;
+
+}
+.foot-icon button::after{
+  border: 0 ;
+}
+
+/* 遮罩层样式 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+}
+.block{
+  margin-top: 190rpx;
+  margin-left: 75rpx;
+  margin-right: 75rpx;
+
+}
+.block-icon{
+  margin-top:400rpx ;
+  margin-left: 250rpx;
+  color:red;
+  font-size: 80rpx;
+}
+.block-content-title{
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 65rpx;
+}
+.block-content{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  margin-bottom: 35rpx;
+
+}

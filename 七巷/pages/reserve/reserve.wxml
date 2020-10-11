@@ -1,0 +1,115 @@
+<view>
+<!--头部-->
+  <view class="view_head">
+    <image src="http://120.79.45.185/images/qixiang.jpg"></image>
+  </view>
+  <!--预约服务等信息-->
+  <view class="reserve-message">
+    <view>
+      <van-icon name="flower-o" size="40rpx" style="position:absolute"/>
+      <view class="reserve-message-title">预约服务：</view>
+      <view class="reserve-message-comment">
+        <text class="reserve-text">{{choiceName}}</text>
+        <van-icon name="play" style="float:right;margin-right:10rpx;margin-bottom:2rpx" size="25rpx" color="#252525a4"/>
+      </view>
+    </view >
+    <view style="margin-top:20rpx">
+       <van-icon name="todo-list-o" size="40rpx" style="position:absolute"/>
+      <view class="reserve-message-title">服务时间：</view>
+      <view class="reserve-message-comment" catchtap="showPopup">
+        <van-popup
+          show="{{ show }}"
+          position="bottom"
+          custom-style="height: 40%;"
+          catchtap="onClose"
+        >
+          <van-datetime-picker
+              type="year-month-time"
+              value="{{ currentDate }}"
+              min-date="{{ minDate }}"
+              bind:input="onInput"
+              bind:confirm="onConfirm"
+              bind:change="onChange"
+            />
+        </van-popup>
+        <text class="reserve-text">{{reserveTime}}</text>
+        <van-icon name="play" style="float:right;margin-right:10rpx;margin-bottom:2rpx" size="25rpx" color="#252525a4"/>
+      </view>
+    </view>
+  </view>
+  <!--具体信息-->
+  <view class="specific-message">
+    <view class="specific-message-topTitle"><text>预留信息</text></view>
+    
+    <view class="specific-view">
+      <view style="display:inline-block;position:relative">
+        <van-icon name="contact" size="40rpx" style="position:absolute"/>
+      <view class="specific-message-title">联 系  人 ：</view>
+      </view>
+      <view class="specific-message-comment">
+        <input class="specific-text"  placeholder="请输入您的姓名" maxlength="100" bindinput="inputName"></input>
+      </view>
+    </view >
+    <view class="specific-view">
+      <view style="display:inline-block;position:relative">
+        <van-icon name="phone-o" size="40rpx" style="position:absolute" />
+        <view class="specific-message-title">联系电话：</view>
+        </view>
+      <view class="specific-message-comment">
+        <input class="specific-text" placeholder="请输入您的手机号码" maxlength="11" type="number" bindinput="inputPhone"></input>
+      </view>
+    
+    </view >
+    <view class="specific-view">
+      <view style="display:inline-block;position:relative">
+        <van-icon name="edit" size="40rpx" style="position:absolute"/>
+        <view class="specific-message-title">预约备注：</view>
+      </view>
+      <view class="specific-message-comment">
+        <input class="specific-text" placeholder="请输入地点、要求等信息" maxlength="100" bindinput="inputNotes"></input>
+      </view>
+    </view >
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="view-checkboox"> 
+   <label class="checkbox">
+      <checkbox-group bindchange="checkboxChange">
+        <checkbox value="1" color="red" style="transform: scale(0.6,0.6);" />
+        <text catchtap="lookRule">同意用户服务协议</text>
+      </checkbox-group>
+    </label>
+     <van-overlay show= "{{ruleShow}}" catchtap="closeLookRule">
+      <view class="wrapper">
+        <view class="block">
+          <view class="block-content-title">用户服务协议</view>
+          <view class="block-content">所有权归七巷所有。</view>
+          <view class="block-content">约定服务开始前14天以内取消，定金将不可退还，但剩余部分费用将予以退还。</view>
+          <view class="block-content">任何时间段内，如因服务方原因取消订单，将退还所有费用，包括定金。</view>
+          <van-icon class="block-icon" name="cross" />
+        </view>
+      </view>
+    </van-overlay>
+  </view>
+  <button class="submitButton" catchtap="onclickSubmit">立即预约</button>
+  <van-dialog id="van-dialog" />
+   <view style="weith:100%;height:1px;background-color:rgb(67, 214, 133);margin-top:40rpx"></view> 
+  <!-- 底部 -->
+  <view class="foot">
+    <view class="foot-icon">
+      <van-icon name="phone-circle-o" size="100rpx" color="rgb(67, 214, 133)" catchtap="makePhone"/>
+      <view>电话</view>
+    </view>
+    <view class="foot-icon">
+      <button open-type="contact">
+        <van-icon name="user-circle-o"  size="100rpx" color="rgb(67, 214, 133)"/>
+      </button>
+      
+      <view>在线咨询</view>
+    </view>
+    
+  </view>
+  
+
+
+</view>

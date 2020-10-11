@@ -1,0 +1,72 @@
+<view class="page-body">
+  <view class="page-head-swiper-view">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true" easing-function="linear" style="width:100%;height:400rpx">
+      <block wx:for="{{imageUrl}}" wx:key="*this">
+        <swiper-item>
+          <image class="swiper-image" src="{{item}}" mode='widthFix' webp="true"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="page-head-swiper-view-text">
+      <view>
+        <text class="page-head-swiper-view-text-name">{{packageName}}</text>
+      </view>
+      <view class="page-head-swiper-view-text-priceAndDeposit">
+        <text class="page-head-swiper-view-text-price">￥ {{price}}</text>
+        <text class="page-head-swiper-view-text-deposit">定金 ￥{{deposit}}</text>
+      </view>
+      
+    </view >
+  </view>
+
+   <view style="weith:100%;height:5px;background-color:#F0F0F0;margin-top:40rpx"></view> 
+
+   <view class="view-serviceDescription">
+    <view class="view-title">服务详情：</view>
+    <text class="view-serviceDescription-content">{{description}}</text>
+   </view>
+
+   <view class="view-careAbout">
+      <view class="view-title">注意事项：</view>
+      <text class="view-careAbout-content">{{careAbout}}</text>
+   </view>
+
+   <view style="weith:100%;height:3px;background-color:#F0F0F0;margin-top:40rpx"></view> 
+
+   <view class="view-notice">
+    <view class="view-title">须知：</view>
+    <text class="view-notice-stitle">退订政策 </text>
+    <text class="view-notice-content">  约定服务开始前14天以上取消，退还所有费用，包......</text>
+    <view class="view-notice-description" catchtap="onClickShow">
+      <text>查看详情</text>
+    </view>
+    <van-overlay show="{{ show }}" bind:click="onClickHide">
+      <view class="wrapper">
+        <view class="block">
+          <view class="block-content-title">退订政策</view>
+          <view class="block-content">约定服务开始前14天以上取消，退还所有费用，包括定金。</view>
+          <view class="block-content">约定服务开始前14天以内取消，定金将不可退还，但剩余部分费用将予以退还。</view>
+          <view class="block-content">任何时间段内，如因服务方原因取消订单，将退还所有费用，包括定金。</view>
+          <van-icon class="block-icon" name="cross" />
+        </view>
+      </view>
+    </van-overlay>
+    
+   </view>
+   <view>
+      <block wx:for="{{imageUrl}}">
+        <image src="{{item}}" webp="true" style="width:100% ;margin-top:10rpx" mode='widthFix'></image>
+      </block>
+    </view>
+   
+   <view class="view-foot">
+
+   </view>
+
+  <van-goods-action>
+    <van-goods-action-icon icon="like-o" text="收藏" catchtap="onClickCollect"/>
+    <van-goods-action-icon icon="chat-o" text="客服" catchtap="onClickKefu" open-type="contact"/>
+    <van-goods-action-button  color="#7232dd" text="立即预约" size="lage" catchtap="onClickReserve" />
+  </van-goods-action>
+  
+</view>

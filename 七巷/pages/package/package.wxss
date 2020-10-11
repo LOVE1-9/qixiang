@@ -1,0 +1,106 @@
+/* pages/package/package.wxss */
+.swiper-image{
+  width: 100%;
+  height: 100%;
+}
+.page-head-swiper-view-text{
+  margin-top:30px;
+  margin-left: 50rpx;
+}
+.page-head-swiper-view-text-name{
+  font-size: 40rpx;
+}
+.page-head-swiper-view-text-priceAndDeposit{
+  margin-top: 0;
+}
+.page-head-swiper-view-text-price{
+  color: red;
+  font-size: 50rpx;
+
+}
+.page-head-swiper-view-text-deposit{
+  color:#A8A8A8;
+  margin-top:10rpx;
+  font-size: 30rpx;
+  padding-left: 15rpx;
+
+}
+.view-serviceDescription{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom:60rpx;
+}
+.view-title{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 22rpx;
+}
+.view-serviceDescription-content{
+  font-size: 25rpx;
+  
+}
+
+.view-careAbout{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom:60rpx;
+}
+
+.view-careAbout-content{
+  font-size: 25rpx;
+}
+
+.view-notice{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom:60rpx;
+}
+.view-notice-stitle{
+  font-weight: bold;
+  font-size: 25rpx;
+}
+.view-notice-content{
+  font-size: 25rpx;
+}
+.view-notice-description{
+  width: 100%;
+  height:50rpx;
+  margin-top: 10rpx;
+  
+}
+.view-notice-description text{
+  font-size: 25rpx;
+  color: rgb(131, 231, 226);
+  border-bottom: 2rpx solid rgb(131, 231, 226);  
+}
+/* 遮罩层样式 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+}
+.block{
+  margin-top: 190rpx;
+  margin-left: 75rpx;
+  margin-right: 75rpx;
+
+}
+.block-content-title{
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 65rpx;
+}
+.block-content{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  margin-bottom: 35rpx;
+
+}
+.block-icon{
+  margin-top:400rpx ;
+  margin-left: 250rpx;
+  color: aqua;
+  font-size: 80rpx;
+}
+
